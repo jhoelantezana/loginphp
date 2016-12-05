@@ -1,0 +1,88 @@
+.registerUser{
+    $color-form: $color-1;
+    &__register{
+        // margin: 7rem 1rem;
+        color: $color-form;
+        position: relative;
+        max-width: 350px;
+        &__header{
+            background: $color-1;
+            text-align: center;
+            border-radius:  1rem 1rem 0 0; 
+        }
+        &__title{
+            margin: 0;
+            padding: 1rem;
+            color: $white_darck;
+            font-weight: 100;
+        }
+        &__formContainer{
+            padding: 1rem;
+
+            input{
+                margin: 0.8rem 0;
+                border: 1px solid $color-form;
+                color: $color-1;
+                    display: block;
+                    width: 100%;
+                // @include to($m){
+                // }
+                // @include from($m){
+                //     width: 47%;
+                // }
+            }
+
+        }
+        .sex{
+            display: flex;
+            padding: 0.2rem;
+            width: 100%;
+            &__m,
+            &__f{
+                margin: 0 0.5rem;
+                width: 5em;
+                display: flex;
+                align-items: center;
+            }
+        }
+        [type*='submit']{
+            background: $color-1;
+            border: none;
+            color: $white_darck;
+            font-size: 0.9rem;
+            line-height: 2.5rem;
+            transition:  all 0.2s;
+            cursor: pointer;
+            width: 100%;
+            &:hover{
+                background: lighten($color-1,02);
+            }
+        }
+    }
+}
+.register{
+    &__fields{
+        &__date{
+            display: flex;
+            justify-content: space-between;
+            select{
+                margin: 0;
+                width: 30%;
+                display: block;
+
+                height: 2rem;
+                border-color: $color-1;
+                color: $color-1;
+            }
+        }
+        &__txt{
+            font-size: 1rem;
+            padding: 0 .2rem;
+        }
+        &__item{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+}

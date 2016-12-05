@@ -1,0 +1,67 @@
+/**
+ * ============================================================+
+ * Setings FontFamily proyect =================================+
+ * ============================================================+
+ */
+    $fon-page       : sans-serif;
+    $fz-title       : 2rem;
+    $fz-subTitle    : 1rem;
+    $fz-website     : 0.8rem;
+    // FontFamily Color General
+    $color-font     : #333;
+/**
+ * ============================================================+
+ * Color General ==============================================+
+ * ============================================================+
+ */
+    // color gray scale
+    $white          : #fff;
+    $white_darck    : #FAFAFA;
+
+    $gray_light     : #DBDBDB;
+    $gray           : #777;
+    $gray_darck     : #555;
+
+    $black_light    : #333;
+    $black          : #000;
+
+    // Color default
+    $red            : #CE453A;
+    $blue           : #007ACC;
+    $yellow         : orange;
+    $purple         : purple;
+    $green          : green;
+/**
+ * ============================================================+
+ * Color proyect ==============================================+
+ * ============================================================+
+ */
+    // Color proyect
+    $color-1    : #007ACC;
+    $color-2    : #18283C;
+    $color-3    : #003853;
+    $color-4    : #DC5B4A;
+    $color-5    : mediumseagreen;
+/**
+ * ============================================================+
+ * Sizes layaut ===============================================+
+ * ============================================================+
+ */
+    $header-height: 3rem;
+    $max-width  : 1900px;
+    $xl         : 1600px;
+    $l          : 1200px;
+    $xm         : 900px;
+    $m          : 720px;
+    $xs         : 500px;
+    $s          : 420px;
+@mixin from($size){
+    @media screen and(min-width: #{$size}){
+        @content;
+    }
+}
+@mixin to($size){
+    @media screen and(max-width: #{$size}){
+        @content;
+    }
+}

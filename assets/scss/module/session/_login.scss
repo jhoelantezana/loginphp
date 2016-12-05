@@ -1,0 +1,58 @@
+.loginUser{
+//     // estilos para el fondo transparente
+    $color-form: $color-1;
+
+    &__login{
+        color: $color-form;
+        width: 17rem;
+        position: relative;
+        &__header{
+            background: $color-form;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            border-radius: 1rem 1rem 0 0;
+        }
+        &__title{
+            margin: 1rem auto 0.5rem auto;
+            color: $white;
+            font-weight: 100;
+        }
+        &__profile{
+            margin: 1rem auto;
+            width: 5rem;
+            height: 5rem;
+        }
+        &__formContainer{
+            padding: 1rem;
+            .icon-user,
+            .icon-key{
+                position: relative;
+                &:before{
+                    position: absolute;
+                    right: 0.7rem;
+                    top: 0.8rem;
+                }
+            }
+            input{
+                display: block;
+                width: 100%;
+                margin: 1.5rem 0;
+                border: 1px solid $color-form;
+                color: $color-1;
+            }
+            [type*='submit']{
+                background: $color-1;
+                border: none;
+                color: $white_darck;
+                font-size: 0.9rem;
+                line-height: 2.5rem;
+                transition:  all 0.2s;
+                cursor: pointer;
+                &:hover{
+                    background: lighten($color-1,10);
+                }
+            }
+        }
+    }
+}

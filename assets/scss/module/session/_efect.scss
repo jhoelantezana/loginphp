@@ -1,0 +1,73 @@
+@keyframes rotate {
+	to { transform: rotateY(360deg); }
+}
+.efectCube {
+    $colorG: #009cff;
+    $color-punt : lighten($colorG,20);
+    $color-shadow: rgba(lighten($colorG,20),.4);
+    $color-text: $colorG;
+	padding: 5rem 0;
+	box-reflect: below 2.5rem linear-gradient(transparent, rgba(0, 0, 0, .8));
+	perspective: 400;
+    ul {
+        position: relative;
+        height: 12rem;
+        width: 12rem;
+        margin: auto;
+        transform-style: preserve-3d;
+        animation: rotate 5000ms infinite linear;
+        &::before{
+            position: absolute;
+            content: 'Paul';
+            font-size: 2rem;
+            color: $color-text;
+            margin: auto;
+            top: 55%;
+            left: 67%;
+        }
+        &:active::before{
+            content: '';
+        }
+    }
+    li {
+        position: absolute;
+        height: 15rem;
+        width: 15rem;
+        background-image: linear-gradient(45deg, 
+                                        $color-punt  1px,
+                                        transparent 1px
+                                        );
+        background-size: 1rem 1rem;
+        border-radius: .3rem;
+        box-shadow:
+            inset 0 0 10rem $color-shadow,
+            0 0 10rem $color-shadow;
+        transition: background 900ms, box-shadow 500ms, transform 900ms;
+        color: lighten($color-shadow,10);
+        &:nth-child(1)  {
+            transform: rotateX(90deg) translateZ(5rem);
+        }
+        &:nth-child(2) {
+            transform: rotateY(90deg) translateZ(5rem);
+        }
+        &:nth-child(3) {
+            transform: rotateX(-90deg) translateZ(5rem);
+        }
+        &:nth-child(4) {
+            transform: rotateY(-90deg) translateZ(5rem);
+        }
+        &:nth-child(5) {
+            transform: rotateY(180deg) translateZ(5rem);
+        }
+        &:nth-child(6) {
+            transform: translateZ(5rem);
+        }
+    }
+    &:active{
+        li{
+            background: transparent;
+            box-shadow: none;
+            transform: scale(.5) translateZ(0);
+        }
+    }
+}

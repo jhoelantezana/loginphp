@@ -1,0 +1,48 @@
+.sessionLR{
+    // Setings
+    font-size: 1rem;
+    $color-login : $green;
+    $color-register : $blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+
+    &__login,
+    &__register{
+        // opacity: 0; // temporal =========================>
+        display: block;
+        line-height: 2.9em;
+        margin: 1em;
+        padding: 0 1.2em;
+        text-decoration: none;
+        width: 15em;
+        text-align: center;
+        color: $white;
+        border-radius: 2em;
+        transition: all 0.1s;
+        &:active{
+            transform: scale(0.95);
+        }
+    }
+    &__login{
+        background: lighten($color-login,05);
+        color: $white_darck;
+        box-shadow: 0 0 10px rgba($color-login,.3);
+        &:hover,
+        &:active{
+            background: lighten($color-login,10);
+        }
+    }
+    &__register{
+        background: $white_darck;
+        color: $color-register;
+        box-shadow: 0 0 10px rgba($white_darck,.3);
+        &:hover,
+        &:active{
+            background: darken($white_darck,05);
+        }
+    }
+}

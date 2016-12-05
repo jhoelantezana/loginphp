@@ -1,0 +1,48 @@
+.sidebar{
+    &__menu,
+    &__subMenu{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        [class*='icon-']::before{
+            position: relative;
+            margin-right: 0.3rem;
+        }
+    }
+    &__menu{
+        a{
+            text-decoration: none;
+        }
+        &__item{
+            background: darken($color-2,02);
+            color: lighten($gray,12);
+            &>a,
+            &>h4{
+                line-height: 2rem;
+                margin: 0;
+                font-size: 0.8rem;
+                font-weight: 100;
+                padding: 0 0.5rem;
+                display: block;
+                cursor: pointer;
+                &:hover{
+                    background: darken($color-2,04);
+                }
+            }
+        }
+    }
+    &__subMenu{
+        background: lighten($color-2,02);
+        color: lighten($gray,05);
+        &__item{
+            &>a,{
+                padding-left: 1.5rem;
+                line-height: 1.7rem;
+                display: block;
+                &:hover{
+                    background: lighten($color-2,04)
+                }
+            }
+        }
+    }
+}

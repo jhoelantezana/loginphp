@@ -1,0 +1,111 @@
+// Imagen de fondo de viwmvenida par ale sistema de login
+body{
+    background: linear-gradient(#0B4176,#0D64B0)
+}
+.registerUser,
+.loginUser{
+    position: absolute;
+    overflow: auto;
+    min-height: 100vh;
+    width: 100%;
+    z-index: 10;
+
+    top: -200%;
+
+    // pocicionamiento central
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // color de fondo
+    background: rgba($black,0.7);
+    transition: all .1s;
+    // .closeWindow{
+    //     background: $red;
+    //     position: absolute;
+    //     // border-radius: 0 1rem 0 1rem;
+    //     bottom: 05px;
+    //     right: 0;
+    //     line-height: 2rem;
+    //     width: 3rem;
+    //     // box-shadow: 2px 2px 2px darken(rgba($red,0.8),20) inset;
+    //     cursor: pointer;
+    //     &:before{
+    //         font-size: 1rem;
+    //         color: $white_darck;
+    //         position: relative;
+    //         top: 4px;
+    //     }
+    // }
+}
+.main{
+    .loginRegisterOption{
+        input{
+            margin: 0;
+            width: 55%;
+        }
+    }
+}
+.loginRegisterOption{
+    display: flex;
+    justify-content: space-between;
+    line-height: 2.5rem;
+    margin: 1rem 0;
+    #closeRegister,
+    #closeLogin{
+        background: lighten($red,40);
+        padding: 0 1rem;
+        border-radius: 10px;
+        color: darken($red,20);
+        cursor: pointer;
+        width: 40%;
+        &::before{
+            position: relative;
+            top: 5.5px;
+            font-size: 1.3rem;
+        }
+        &:hover{
+            background: lighten($red,10);
+            color: $white;
+        }
+    }
+}
+.registerUser__register,
+.loginUser__login{
+    background: $white_darck;
+    border-radius: 1rem;
+}
+// classespara insrtagos dinamicamiente de JS
+.showWindowsS{
+    top: 0;
+}
+.errorM{
+    &__message{
+        padding: 0.5rem;
+        width: 100%;
+        @include from($m){
+            width: 50%;
+        }
+        position: fixed;
+        background: $red;
+        left: 50%;
+        transform: translateX(-50%);
+        color: $white_darck;
+        font-weight: 100;
+        margin: 0;
+        top: -150%;
+        transition: all .7s;
+        z-index: 500;
+        border-radius: 10px;
+    }
+    &__show{
+        top: 10px;
+    }
+}
+.loading{
+    position: relative;
+    line-height: 0.5rem;
+    width: 100%;
+    height: 1rem;
+    margin-top: -0.5rem;
+}

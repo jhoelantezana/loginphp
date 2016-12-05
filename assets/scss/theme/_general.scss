@@ -1,0 +1,15 @@
+.main{
+    &__sidebar{
+        background: $color-2;
+        color: $gray_light;
+    }
+}
+.errorMessage{
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid lighten($color-4,10);
+    background: lighten($color-4,32);
+    color: darken($color-4,10);
+    transition: all 1s;
+    margin: 0.5rem auto;
+}

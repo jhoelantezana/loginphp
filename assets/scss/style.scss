@@ -1,0 +1,23 @@
+/** Estylos principales de la aplicacion =================*/
+@import   "base/config";
+@import   "base/base";
+/** Estylos usados en el layaut ==========================*/
+@import   "layaut/layaut";
+/** Estylos Generales de la pagina =======================*/
+@import   "theme/general";
+@import   "theme/header";
+@import   "theme/menu";
+@import   "theme/404";
+// /** Estylos Independientes de cada pagina ================*/
+@import   "module/adminUser/adminusers";
+@import   "module/adminUser/pagesuser";
+
+@import   "module/viewuserprofile";
+@import   "module/userupdate";
+// /** Estylos Independientes de cada pagina ================*/
+@import   "sidebar/profile";
+@import   "sidebar/header";
+@import   "sidebar/menu";
+// /** Estylos Independientes de cada pagina ================*/
+
+// /** CSS TEST*/

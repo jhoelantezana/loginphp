@@ -1,0 +1,16 @@
+/** Estylos principales de la aplicacion =================*/
+@import   "base/config";
+@import   "base/base";
+/** Estylos usados en el layaut ==========================*/
+@import   "layaut/LRUser";
+/** Estylos Generales de la pagina =======================*/
+
+/** Estylos Independientes de cada pagina ================*/
+@import   "module/session/general";
+@import   "module/session/loading";
+@import   "module/session/efect";
+@import   "module/session/sessionLR";
+@import   "module/session/login";
+@import   "module/session/register";
+
+/** CSS TEST*/

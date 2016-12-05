@@ -1,0 +1,17 @@
+{
+  "name": "4_php",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Yoel <yoel.antezana@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-typescript": "^3.1.3"
+  },
+  "dependencies": {
+    "gulp-typescript": "^3.1.3",
+    "typescript": "^2.0.10"
+  }
+}

@@ -1,0 +1,43 @@
+.SWBanner{
+    padding: 0.5rem;
+    // position: relative;
+    // &__banner{
+    //     // position: relative;
+    //     &::before{
+    //         content: '';
+    //         // position: absolute;
+    //         width: 100%;
+    //         height: 100%;
+    //         background: linear-gradient(45deg,
+    //                                   rgba($white,0.5) 50% ,
+    //                                   transparent 50%
+    //                                   );
+    //         z-index: 10;
+    //     }
+    // }
+    &__profile{
+        display: flex;
+        bottom: 2rem;
+        &__img{
+            width: 9rem;
+            background: $white;
+            border: 1px solid darken($white,10);
+            padding: 0.6rem;
+            margin-right: 2rem;
+        }
+        &__fullname{
+            font-weight: 100;
+            font-size: 2rem;
+            margin: 0;
+        }
+        &__email{
+
+        }
+        &__username{
+
+        }
+    }
+    &__edit{
+        
+    }
+}
