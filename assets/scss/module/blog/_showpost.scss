@@ -1,0 +1,83 @@
+.showPost{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+}
+.post{
+    background: $white;
+    box-shadow: 0 0 0 1px rgba($gray,0.1);
+    margin: 1rem 0.5%;
+    width: 100%;
+    max-width: 20rem;
+    min-width: 12rem;
+    @include from($m){
+        width: 49%;
+    }
+    @include from($xm){
+        width: 32%;
+    }
+    @include from($l - 100px){
+        width: 24%;
+    }
+    @include from($l + 150px){
+        width: 19%;
+    }
+    &__title{
+        color: $color-1;
+        background: $white_darck;
+        margin: 0;
+        padding: 0.5rem;
+        position: relative;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        // font-weight: 100;
+    }
+    &__content{
+        margin: 0.4rem 0;
+        padding: 0 0.5rem;
+    }
+    &__readMore{color: $color-1}
+    &__date{
+        margin: 0;
+        color: darken($white,30);
+        font-size: 0.6rem;
+    }
+    &__img{
+        
+    }
+    &__autor{
+        display: flex;
+        align-items: center;
+        &__data{
+            border-left: 2px solid $color-1;
+            height: 95%;
+            margin-left: 0.5rem;
+            padding-left: 0.5rem;
+        }
+        &__img{
+            width: 30px;
+            height: 30px;
+        }
+        &__name{
+            color: $color-1;
+            margin: 0;
+            font-size: 1rem;
+            text-transform: lowercase;
+        }
+    }
+    &__item{
+        &:first-child{
+        }
+        &__subitem{
+            @include from($m){
+                flex: 1 1 auto;
+            }
+        }
+        &:last-child{
+            display: flex;
+            padding: 0.5rem;
+            background: $white_darck;
+        }
+    }
+}

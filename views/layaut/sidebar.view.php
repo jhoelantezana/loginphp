@@ -1,36 +1,42 @@
-<main class="main">
-<div class="contentfluit">
-    <section class="main__sidebar">
-        <header class="main__sidebar__header">
-            <h1>Red Social</h1>
-        </header>
-        <div class="profile">
-            <div class="profile__item">
-                <img src="<?=PUBLIC_PATH . '/assets/img/' . $_SESSION['profileImg']?>" class="profile__banner"alt="">
+    <section class="sidebar">
+        <div class="sidebar__profile">
+            <div class="sidebar__profile__item">
+                <img src="<?=PUBLIC_PATH . '/assets/img/' . $_SESSION['profileImg']?>" class="sidebar__profile__banner"alt="">
             </div>
-            <div class="profile__item">
-                <img src="<?=PUBLIC_PATH . '/assets/img/' . $_SESSION['profileImg']?>" class="profile__img"alt="">
+            <div class="sidebar__profile__item">
+                <img src="<?=PUBLIC_PATH . '/assets/img/' . $_SESSION['profileImg']?>" class="sidebar__profile__img"alt="">
             </div>
-            <div class="profile__item">
-                <a href="/auview?id=<?= $_SESSION['id'] ?? ''?>" class="profile__userName"><?= $_SESSION['userName'] ?? ''?></a>
-                <p class="profile__online">online</p>
-                <a href="auview?id=<?= $_SESSION['id'] ?? ''?>" class="profile__logout">Editar Perfil</a>
+            <div class="sidebar__profile__item">
+                <a href="/auview?id=<?= $_SESSION['id'] ?? ''?>" class="sidebar__profile__userName"><?= $_SESSION['userName'] ?? ''?></a>
+                <p class="sidebar__profile__online">online</p>
+                <a href="auview?id=<?= $_SESSION['id'] ?? ''?>" class="sidebar__profile__logout">Editar Perfil</a>
             </div>
         </div>
         <nav>
             <ul class="sidebar__menu">
-                <li class="sidebar__menu__item"><a href="/" class="icon-home">Inicio</a></li>
                 <li class="sidebar__menu__item">
-                    <h4 class="icon-user-profile">Usuarios</h4>
+                    <a href="/" class="sidebar__menu__link icon-home">Inicio</a>
+                </li>
+                <li class="sidebar__menu__item">
+                    <a class="sidebar__menu__link icon-user-add"href="/">Entradas</a>
                     <ul class="sidebar__subMenu">
-                        <li class="sidebar__subMenu__item"><a class="sidebar__subMenu__link icon-user-add"href="/register">Añadir</a></li>
-                        <li class="sidebar__subMenu__item"><a class="sidebar__subMenu__link icon-bubble"href="/message">Mensajes</a></li>
-                        <li class="sidebar__subMenu__item"><a class="sidebar__subMenu__link icon-lock"href="/rol">Roles</a></li>
-                        <li class="sidebar__subMenu__item"><a class="sidebar__subMenu__link icon-users"href="/adminusers">Administrar</a></li>
+                        <li class="sidebar__subMenu__item"><a href="#" class="sidebar__subMenu__link" id="ampaddPost">Nueva Entrada</a></li>
+                        <li class="sidebar__subMenu__item"><a href="/blog/admin" class="sidebar__subMenu__link">Gestionar</a></li>
                     </ul>
                 </li>
                 <li class="sidebar__menu__item">
-                    <h4 class="icon-params">Configuracion</h4>
+                    <a class="sidebar__menu__link icon-user-add"href="/adminusers">Usuarios</a>
+                    <ul class="sidebar__subMenu">
+                        <li class="sidebar__subMenu__item"><a href="" class="sidebar__subMenu__link">Añadir</a></li>
+                        <li class="sidebar__subMenu__item"><a href="" class="sidebar__subMenu__link">Roles</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar__menu__item">
+                    <a class="sidebar__menu__link icon-user-add"href="/adminusers">Configuracion</a>
+                    <ul class="sidebar__subMenu">
+                        <li class="sidebar__subMenu__item"><a href="" class="sidebar__subMenu__link">Principal</a></li>
+                        <li class="sidebar__subMenu__item"><a href="" class="sidebar__subMenu__link">Blog</a></li>
+                    </ul>
                 </li>
             </ul>
         </nav>

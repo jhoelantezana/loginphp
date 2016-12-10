@@ -2,11 +2,9 @@
     require_once __DIR__ . '/config/app.php';
     use App\Libraries\Router;
     session_start();
-
     // =================== Acceso solo a usuarios registrados ===================
     if(isset($_SESSION['userName'])){
-        $url = $_GET['url'] ?? '';
-        $url = ROUTES[$url] ?? false;
+        $url = ROUTES[$_GET['url'] ?? ''] ?? false;
         if($url){
             Router::any($url['controller'],$url['action']);
         }else{
@@ -14,8 +12,7 @@
         }
     // ============================= Acceso publico =============================
     }else{
-        $url = $_GET['url'] ?? '';
-        $url = ROUTERPUBLIC[$url] ?? false;
+        $url = ROUTERPUBLIC[$_GET['url'] ?? ''] ?? false;
         if($url){
             Router::any($url['controller'],$url['action']);
         }else{

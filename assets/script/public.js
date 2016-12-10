@@ -2,7 +2,7 @@ var Ajax = (function () {
     function Ajax(method, url, send, pro) {
         if (send === void 0) { send = null; }
         this.petition = new XMLHttpRequest();
-        this.petition.open('POST', 'http://localhost/session/login');
+        this.petition.open(method, url);
         this.petition.onreadystatechange = pro;
         this.petition.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         this.petition.send(send);

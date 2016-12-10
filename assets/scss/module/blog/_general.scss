@@ -1,0 +1,25 @@
+.sonePost{
+    overflow: auto;
+    height: 100%;
+    padding: 0.4rem;
+    overflow: auto;
+    @include from($m){
+        // display: flex;
+    }
+    &__options{
+        margin: 1rem 0;
+        &__add{
+            line-height: 2.5rem;
+            padding: 0 1rem;
+            background: lighten($green,10);
+            display: inline-block;
+            border-radius: 17px;
+            color: $white;
+            cursor: pointer;
+            &:hover,
+            &:active{
+                background: lighten($green,05);
+            }
+        }
+    }
+}

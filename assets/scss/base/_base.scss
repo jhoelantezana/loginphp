@@ -9,7 +9,7 @@ body{
     font-family: $fon-page;
     font-size: $fz-website ;
     color: $color-font;
-    background: $white_darck;
+    background: darken($white_darck,02);
 }
 img,
 video{
@@ -45,11 +45,14 @@ select{
     line-height: 2rem;
     margin: 0.5rem 0;
     display: inline-block;
-    padding: 0 0.7rem;
+    padding: 0 1rem;
     text-decoration: none;
-    background: darken($white,10);
-    border-radius: 5px;
-    &:hover{
+    background: lighten($color-1,07);
+    border-radius: 15px;
+    color: $white;
+    cursor: pointer;
+    &:hover,
+    &:active{
         background: $color-1;
         color: $white;
     }

@@ -1,0 +1,21 @@
+.table{
+    border-collapse: collapse;
+    // stykes genearals
+    td,
+    th{
+        padding: 0 0.5rem;
+        line-height: 1.8rem;
+    }
+    img{
+        height: 30px;
+    }
+    &__container{
+        width: 100%;
+        overflow: auto;
+    }
+    &__thead{
+        th{
+            background: $color-1;
+        }
+    }
+}

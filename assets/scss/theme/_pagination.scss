@@ -1,0 +1,31 @@
+// Estilos para la paginacion de contenidos de la pagina web
+.pagination{
+    margin: 2rem 0;
+    &__ul{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item{
+        margin: 0 0.1rem;
+    }
+    &__link{
+        display: block;
+        padding: 0 1rem;
+        line-height: 2rem;
+        text-decoration: none;
+        background: $white;
+        transition: all .2s ;
+        &:hover{
+            background: $color-1;
+            color: $white_darck;
+        }
+    }
+    &__active{
+        background: lighten($color-1,03);
+        color: $white_darck;
+    }
+}

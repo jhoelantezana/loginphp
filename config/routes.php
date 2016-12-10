@@ -1,6 +1,15 @@
 <?php
     define('ROUTES',[
+        'blog/post' => [
+            'controller'    => 'Blog',
+            'action'        => 'showPost'
+        ],
+        /*============================= Inicio O BLOG =================================*/
         '' => [
+            'controller'    => 'Page',
+            'action'        => 'index'
+        ],
+        'index' => [
             'controller'    => 'Page',
             'action'        => 'index'
         ],
@@ -29,5 +38,26 @@
         'logout' => [
             'controller'    => 'Session',
             'action'        => 'logout'
+        ],
+        /*============================= Control Blog ====================================*/
+        'blog/newpost' => [
+            'controller'    => 'Blog',
+            'action'        => 'newPost'
+        ],
+        'blog/admin' => [
+            'controller'    => 'Blog',
+            'action'        => 'addminPost'
+        ],
+        'blog/delete' => [
+            'controller'    => 'Blog',
+            'action'        => 'deletePost'
+        ],
+        'blog/edit' => [
+            'controller'    => 'Blog',
+            'action'        => 'editPost'
+        ],
+        'blog/update' => [
+            'controller'    => 'Blog',
+            'action'        => 'updatePost'
         ],
     ]);

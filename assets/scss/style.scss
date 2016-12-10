@@ -8,6 +8,8 @@
 @import   "theme/header";
 @import   "theme/menu";
 @import   "theme/404";
+@import   "theme/pagination";
+@import   "theme/table";
 // /** Estylos Independientes de cada pagina ================*/
 @import   "module/adminUser/adminusers";
 @import   "module/adminUser/pagesuser";
@@ -16,8 +18,10 @@
 @import   "module/userupdate";
 // /** Estylos Independientes de cada pagina ================*/
 @import   "sidebar/profile";
-@import   "sidebar/header";
 @import   "sidebar/menu";
 // /** Estylos Independientes de cada pagina ================*/
+@import   "module/blog/general";
+@import   "module/blog/showpost";
+@import   "module/blog/addpost";
 
 // /** CSS TEST*/

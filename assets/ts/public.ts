@@ -2,7 +2,7 @@ class Ajax{
     petition:any;
     constructor(method:string, url:string, send:string = null, pro?:any){
         this.petition = new XMLHttpRequest();
-        this.petition.open('POST','http://localhost/session/login');
+        this.petition.open(method,url);
         this.petition.onreadystatechange = pro;
         this.petition.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         this.petition.send(send);
